@@ -10,8 +10,25 @@
 <body>
     <section class="container">
         <h1>Gerador de Senhas</h1>
-        <div class="senha-gerada"></d iv>
-        
+        <h2 id="senha-gerada">Selecione os campos</h2>
+        <div class="inputs">
+            <div>
+                <span>Quantidade de caracteres</span> <input type="number" id="quantidade" max="50" min="0">
+            </div>
+            <div>
+                <span>Adicionar Maiúsculas</span> <input type="checkbox" id="maiusculas">
+            </div>
+            <div>
+                <span>Adicionar Minúsculas</span> <input type="checkbox" id="minusculas">
+            </div>
+            <div>
+                <span>Adicionar Números</span> <input type="checkbox" id="numeros">
+            </div>
+            <div>
+                <span>Adicionar Símbolos</span> <input type="checkbox" id="simbolos">
+            </div>
+        </div>
+        <button id="generator">Gerar Senha</button>
     </section>
 
     <script src="./assets/js/bundle.js"></script>
