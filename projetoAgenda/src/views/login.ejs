@@ -1,0 +1,46 @@
+<%- include('includes/head') %> 
+<%- include('includes/nav') %> 
+
+    <div class="container">
+        <h1 class="agenda-h">Login</h1>
+        <p>Crie sua conta ou faça login:</p>
+
+        <%- include('includes/messages') %> 
+        
+        <div class="content-login">
+            <div class="signup">
+                <h3>Faça seu cadastro</h3>
+                <form action="/login/register" method="POST">
+                    <input type="hidden" name="_csrf" value= <%= csrfToken %> >
+                    <p>Não possui conta? Preencha o cadastro.</p>
+                    <div class="fields">
+                        <label for="email">Cadastre seu email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="fields">
+                        <label for="password">Cadastre sua senha</label>
+                        <input type="password" name="password">
+                    </div>
+                    <button type="submit">Criar minha conta</button>
+                </form>
+            </div>
+            <div class="signin">
+                <h3>Faça seu login</h3>
+                <form action="/login/login" method="POST">
+                    <input type="hidden" name="_csrf" value= <%= csrfToken %> >
+                    <p>Já é cadastrado? Faça login.</p>
+                    <div class="fields">
+                        <label for="email">Email</label>
+                        <input type="email" name="email">
+                    </div>
+                    <div class="fields">
+                        <label for="password">Senha</label>
+                        <input type="password" name="password">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include('includes/footer') %> 
