@@ -1,0 +1,28 @@
+<%- include('includes/head')%>
+    <section class="container">
+        <h1>
+            <% if(typeof titulo !== 'undefined') { %>
+                <%= titulo %> <br> <!--aqui ele escreve exatamente o que foi mandado-->
+                <%- titulo %> <!--aqui ele mostra como tag-->
+            <% }else { %>
+                Título não foi enviado!
+            <% } %>
+        </h1>
+
+        <h2>
+            <% numeros.forEach(num=>{ %>
+                <%= num %> <br>
+            <% }); %>
+        </h2>
+
+        <form action="/" method="post">
+            <label for="titulo">Título</label>
+            <input type="text" name="titulo">
+            <label for="descricao">Descrição</label>
+            <input type="text" name="descricao">
+            <button type="submit">Enviar</button>
+        </form>
+        
+    </section>
+<%- include('includes/footer')%>
+
