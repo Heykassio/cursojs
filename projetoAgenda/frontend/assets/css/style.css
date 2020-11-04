@@ -35,6 +35,12 @@ a {
 
 ul {
     list-style: none;
+    display: flex;
+}
+
+li {
+    margin-left: 16px;
+    font-size: 0.8em;
 }
 
 .container {
@@ -120,24 +126,44 @@ h3 {
     padding: 0px 16px;
 }
 
-.content-login .fields {
+.content-login .fields,
+.contato-create .fields {
     display: flex;
     flex-direction: column;
     text-align: start;
     margin-bottom: 12px;
 }
 
-.content-login .fields label {
+.contato-create .fields {
+    margin-bottom: 36px;
+}
+
+.contato-create {
+    padding: 16px;
+    margin-top: 36px;
+}
+
+.content-login .fields label,
+.contato-create .fields label {
     font-size: 1em;
 }
 
-.content-login .fields input {
+.content-login .fields input{
     width: 90%;
     padding: 6px 16px;
     border-radius: 8px;
 }
 
-.content-login button {
+.contato-create .fields input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-top: 8px;
+    font-size: 1.1em;
+}
+
+.content-login button,
+.contato-create button{
     padding: 8px 16px;
     font-size: 1em;
     color: #fff;

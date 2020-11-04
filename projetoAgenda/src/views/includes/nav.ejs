@@ -3,9 +3,18 @@
         <a href="/">Agenda</a>
         <div class="links">
             <ul>
-                <li>
-                    <a href="/login">Login</a>
-                </li>
+                <% if(user) { %>
+                    <li>
+                        <a href="/contato/create">Criar contato</a>
+                    </li> 
+                    <li>
+                        <a href="/logout">Logout</a>
+                    </li>
+                <% }else { %>
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                <% } %>  
             </ul>
         </div>
     </div>
