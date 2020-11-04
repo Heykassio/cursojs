@@ -4,7 +4,7 @@ const mongoose = require('mongoose');//importando o mongoose
 const { CONNECTIONSTRING: connectString, SECRETSESSION: secret } = require('./config');//importando a connection string do mongodb e a secret do express-session
 
 
-mongoose.connect(connectString, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true })//iniciando a conexão do mongoose
+mongoose.connect(connectString, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true, useFindAndModify: false })//iniciando a conexão do mongoose
     .then(()=>{//o mongoose.connect retorna uma promisse, por isso o then/catch
         app.emit('Pronto');//quando a conexão estiver estabelecida, o app emite um alerta pra avisar o servidor pra iniciar
     }).catch(e=>console.log(e));

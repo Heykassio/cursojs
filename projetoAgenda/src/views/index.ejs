@@ -6,17 +6,24 @@
         <p>Seus contatos estão abaixos.</p>
         
         <%- include('includes/messages') %> 
-        
+        <% if(contatos.length > 0) { %> 
         <div class="table-contacts">
             <table>
-                <tr>
-                    <td>Kassio</td>
-                    <td>Costa</td>
-                    <td>0971802979</td>
-                    <td>heykassio@live.com</td>
-                </tr>
+                <% contatos.forEach(contato => { %>
+                    <tr>
+                        <td class="name"><%= contato.name %> </td>
+                        <td class="lastname"><%= contato.lastname %></td>
+                        <td class="phone"><%= contato.phone %></td>
+                        <td class="email"><%= contato.email %></td>
+                        <td class="links-edit"><a href="/contato/<%= contato._id %>" class="edit-link">Editar</a></td>
+                        <td class="links-edit"><a href="/contato/delete/<%= contato._id %>" class="delete-link">Deletar</a></td>
+                    </tr>
+                <% }); %> 
             </table>
         </div>
+        <% }else{ %> 
+            <p>Não existem contatos para serem exibidos.</p>
+        <% } %> 
     </div>
 
 <%- include('includes/footer') %> 

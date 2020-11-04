@@ -106,6 +106,24 @@ h1.agenda-h {
     padding: 16px 8px;
 }
 
+.table-contacts table tr td.name,
+.table-contacts table tr td.lastname {
+    width: 88px;
+    max-width: 88px;
+    min-width: 88px;
+}
+
+.table-contacts table tr td.phone {
+    width: 120px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
+.table-contacts table tr td.email {
+    width: 180px;
+    max-width: 180px;
+    min-width: 180px;
+}
 /* *************** LOGIN PAGE *********************** */
 
 .content-login {
@@ -182,4 +200,19 @@ h3 {
 .content-login p {
     font-size: 1em;
     margin: 8px 0;
+}
+
+/* .contato-create .buttons-fields {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.table-contacts .edit-link {
+    text-decoration: none;
+    color: #6200EE;
+}
+
+.table-contacts .delete-link {
+    text-decoration: none;
+    color: #A60027;
 }

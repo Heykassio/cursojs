@@ -23,8 +23,17 @@ exports.checkCsrfError = (err, req, res, next) => {
   exports.loginRequired = (req, res, next) => {
     if(!req.session.user){
       req.flash('errors', 'Você precisa estar logado para adicionar contatos!');
-      req.session.save(()=> res.redirect('/'));
+      req.session.save(()=> res.redirect('/login'));
       return;
     }
     next();
   };
+
+  exports.viewAgenda = (req, res, next) => {
+    if(!req.session.user) {
+      req.flash('errors', 'Você precisa estar logado para ver os contatos!');
+      req.session.save(() => res.redirect('/login'));
+      return
+    }
+    next();
+  }
