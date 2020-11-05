@@ -8,12 +8,12 @@
         <%- include('includes/messages') %> 
         <div class="contato-create">
             <% if(contato._id) { %>
-            <form action="/contato/edit/<%= contato._id %>" method="POST">
+            <form action="/contato/edit/<%= contato._id %>" method="POST" id="form-contat">
             <% } else { %> 
-            <form action="/contato/register" method="POST">
+            <form action="/contato/register" method="POST" id="form-contat">
             <% } %> 
                 <input type="hidden" name="_csrf" value= <%= csrfToken %> >
-                <div class="fields">
+                <div class="fields name">
                     <label for="name">Nome</label>
                     <input value="<%= contato.name %>" type="text" name="name">
                 </div>
@@ -21,11 +21,11 @@
                     <label for="lastname">Sobrenome</label>
                     <input value="<%= contato.lastname %>"  type="text" name="lastname">
                 </div>
-                <div class="fields">
+                <div class="fields email">
                     <label for="email">Email</label>
                     <input value="<%= contato.email %>"  type="email" name="email">
                 </div>
-                <div class="fields">
+                <div class="fields phone">
                     <label for="phone">Telefone</label>
                     <input value="<%= contato.phone %>"  type="tel" name="phone">
                 </div>

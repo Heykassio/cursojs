@@ -216,3 +216,8 @@ h3 {
     text-decoration: none;
     color: #A60027;
 }
+
+.error-input-text {
+    font-size: 0.7em;
+    color: #A60027;
+}
